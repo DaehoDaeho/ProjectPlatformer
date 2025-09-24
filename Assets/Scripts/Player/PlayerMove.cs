@@ -9,6 +9,7 @@ public class PlayerMove : MonoBehaviour
     public LayerMask groundMask;
     public Rigidbody2D rb;
     public float rayLength = 0.2f;
+    public bool useRaycast = true;
 
     private float moveInput;
     private bool isGrounded = false;
@@ -37,14 +38,29 @@ public class PlayerMove : MonoBehaviour
     {
         if (footPoint != null)
         {
-            Collider2D hit = Physics2D.OverlapCircle((Vector2)footPoint.position, groundCheckRadius, groundMask);
-            if (hit != null)
+            if(useRaycast == true)
             {
-                isGrounded = true;
+                RaycastHit2D hit = Physics2D.Raycast((Vector2)footPoint.position, Vector2.down, 0.2f, groundMask);
+                if(hit.collider != null)
+                {
+                    isGrounded = true;
+                }
+                else
+                {
+                    isGrounded = false;
+                }
             }
             else
             {
-                isGrounded = false;
+                Collider2D hit = Physics2D.OverlapCircle((Vector2)footPoint.position, groundCheckRadius, groundMask);
+                if (hit != null)
+                {
+                    isGrounded = true;
+                }
+                else
+                {
+                    isGrounded = false;
+                }
             }
         }
 
