@@ -34,6 +34,7 @@ public class PlayerRespawn : MonoBehaviour
         }
         else
         {
+            rigidBody.linearVelocity = Vector2.zero;
             transform.position = defaultSpawnPosition;
         }
     }
