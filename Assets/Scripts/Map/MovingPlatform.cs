@@ -44,7 +44,7 @@ public class MovingPlatform : MonoBehaviour
         rb.MovePosition(next);
 
         CurrentDelta = next - before;
-        //if (Time.fixedDeltaTime > 0.0f)
+        if (Time.fixedDeltaTime > 0.0f)
         {
             CurrentVelocity = CurrentDelta / Time.fixedDeltaTime;
         }
