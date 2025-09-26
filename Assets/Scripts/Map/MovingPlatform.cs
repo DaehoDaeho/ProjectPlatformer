@@ -10,6 +10,7 @@ public class MovingPlatform : MonoBehaviour
     private int currentIndex = 0;
 
     public Vector2 CurrentDelta { get; private set; }
+    public Vector2 CurrentVelocity { get; private set; }
 
     private void Start()
     {
@@ -19,6 +20,8 @@ public class MovingPlatform : MonoBehaviour
     private void FixedUpdate()
     {
         CurrentDelta = Vector2.zero;
+        CurrentVelocity = Vector2.zero;
+
         Vector2 before = rb.position;
 
         Transform target = wayPoints[currentIndex];
@@ -41,5 +44,9 @@ public class MovingPlatform : MonoBehaviour
         rb.MovePosition(next);
 
         CurrentDelta = next - before;
+        //if (Time.fixedDeltaTime > 0.0f)
+        {
+            CurrentVelocity = CurrentDelta / Time.fixedDeltaTime;
+        }
     }
 }

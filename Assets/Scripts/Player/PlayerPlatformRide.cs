@@ -31,9 +31,9 @@ public class PlayerPlatformRide : MonoBehaviour
     {
         if(movingPlatform != null)
         {
-            Vector2 p = rb.position;
-            Vector2 moved = p + movingPlatform.CurrentDelta;
-            rb.MovePosition(moved);
+            Vector2 v = rb.linearVelocity;
+            v = v + movingPlatform.CurrentVelocity;
+            rb.linearVelocity = v;
         }
     }
 }
