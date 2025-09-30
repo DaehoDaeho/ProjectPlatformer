@@ -107,4 +107,33 @@ public class EnemyPatrol2D : MonoBehaviour
             transform.localScale = s;
         }
     }
+
+    public void Face(int dir)
+    {
+        if(useFlipX == true)
+        {
+            if(sprite != null)
+            {
+                bool facingLeft = (dir < 0);
+                sprite.flipX = facingLeft;
+            }
+        }
+        else
+        {
+            Vector3 s = transform.localScale;
+            s.x = Mathf.Abs(s.x) * (dir > 0 ? 1.0f : -1.0f);
+            transform.localScale = s;
+        }
+        
+        if(sensorPoint != null)
+        {
+            Vector3 p = sensorPoint.localPosition;
+            p.x = Mathf.Abs(p.x) * (dir > 0 ? 1.0f : -1.0f);
+            sensorPoint.localPosition = p;
+
+            Vector3 e = sensorPoint.localEulerAngles;
+            e.y = (dir > 0) ? 0.0f : 180.0f;
+            sensorPoint.localEulerAngles = e;
+        }
+    }
 }
