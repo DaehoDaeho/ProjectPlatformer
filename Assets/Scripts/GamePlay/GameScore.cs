@@ -30,6 +30,14 @@ public class GameScore : MonoBehaviour
     public void AddScore(int amount)
     {
         currentScore += amount; // currentScore = currentScore + amount;
+
+        if(currentScore >= maxScore)
+        {
+            if(goalPortal != null)
+            {
+                goalPortal.SetActive(true);
+            }
+        }
     }
 
     public int GetScore()
