@@ -13,9 +13,18 @@ public class GameScore : MonoBehaviour
         }
     }
 
+    public int maxScore = 10;
+    public GameObject goalPortal;
+
     private void Awake()
     {
         ResetScore();
+
+        // 유효성 검사. null 체크.
+        if(goalPortal != null)
+        {
+            goalPortal.SetActive(false);
+        }
     }
 
     public void AddScore(int amount)
