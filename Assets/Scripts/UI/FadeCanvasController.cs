@@ -14,7 +14,7 @@ public class FadeCanvasController : MonoBehaviour
         group = GetComponent<CanvasGroup>();
         if (group == null)
         {
-            group = gameObject.AddComponent<CanvasGroup>();
+            group = gameObject.AddComponent<CanvasGroup>();  // 만약 CanvasGroup 컴포넌트가 없다면 새로 추가.
         }
     }
 
