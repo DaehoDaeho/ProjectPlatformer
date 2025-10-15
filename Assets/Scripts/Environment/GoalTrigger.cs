@@ -9,7 +9,13 @@ public class GoalTrigger : MonoBehaviour
     {
         if(collision.CompareTag("Player") == true)
         {
-            if(clearUI != null)
+            LevelTimer levelTimer = FindAnyObjectByType<LevelTimer>();
+            if(levelTimer != null)
+            {
+                levelTimer.FinishAndSave();
+            }
+
+            if (clearUI != null)
             {
                 clearUI.ShowGameClearUI();
             }
