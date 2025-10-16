@@ -1,9 +1,6 @@
 using UnityEngine;
 using TMPro;
 
-// 파일: ClearStarPresenter.cs
-// 설치: 클리어 패널.
-// 역할: 패널이 켜질 때 별 계산 → UI 갱신.
 public class ClearStarPresenter : MonoBehaviour
 {
     [Header("참조")]
@@ -16,7 +13,6 @@ public class ClearStarPresenter : MonoBehaviour
 
     private void OnEnable()
     {
-        // 의존성 자동 탐색(실무에서는 명시 주입을 선호하지만, 교육에서는 안전한 자동 탐색도 활용한다.)
         if (constraints == null)
         {
             constraints = FindAnyObjectByType<LevelConstraints>();
@@ -49,6 +45,7 @@ public class ClearStarPresenter : MonoBehaviour
 
         if (starText != null)
         {
+            // "Stars: {0} / 3", stars -> "Stars: 3 / 3"
             starText.text = string.Format(format, stars);
         }
         else

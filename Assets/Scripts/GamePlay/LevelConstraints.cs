@@ -1,9 +1,6 @@
 using UnityEngine;
 using TMPro;
 
-// 파일: LevelConstraints.cs
-// 설치: GameManager.
-// 역할: 제한 시간과 데스 카운트 관리. 시간 초과 시 Fail 처리.
 public class LevelConstraints : MonoBehaviour
 {
     [Header("시간 제한")]
@@ -24,6 +21,7 @@ public class LevelConstraints : MonoBehaviour
 
     private void Awake()
     {
+        Time.timeScale = 1.0f;
         remainingTime = startTimeSeconds;
 
         if (failPanel != null)
@@ -37,7 +35,6 @@ public class LevelConstraints : MonoBehaviour
 
     private void OnEnable()
     {
-        // 피격 이벤트 구독. 실무에서는 Enable/Disable에 맞춰 구독/해제를 관리한다.
         GameplayEvents.OnPlayerHit += HandlePlayerHit;
     }
 
@@ -58,7 +55,6 @@ public class LevelConstraints : MonoBehaviour
             return;
         }
 
-        // 카운트다운
         remainingTime = remainingTime - Time.deltaTime;
 
         if (remainingTime < 0.0f)
@@ -108,7 +104,6 @@ public class LevelConstraints : MonoBehaviour
             Debug.LogWarning("LevelConstraints: failPanel이 연결되지 않았습니다.");
         }
 
-        // 게임 정지
         Time.timeScale = 0.0f;
         Debug.Log("LevelConstraints: 시간 초과로 실패 처리되었습니다.");
     }
@@ -151,13 +146,11 @@ public class LevelConstraints : MonoBehaviour
         return result;
     }
 
-    // 클리어 직전에 외부에서 호출하면 시간 0 엣지 케이스를 예방할 수 있다.
     public void MarkCleared()
     {
         cleared = true;
     }
 
-    // 별 계산에서 읽을 값들
     public float GetRemainingTime()
     {
         return remainingTime;

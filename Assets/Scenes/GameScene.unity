@@ -2012,7 +2012,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4279b89a1dc62374892298a80b3b78fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startTimeSeconds: 90
+  startTimeSeconds: 10
   timeText: {fileID: 2142032339}
   deathsText: {fileID: 24832047}
   failPanel: {fileID: 551752794}
