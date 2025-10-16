@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6928571896644936092}
   - component: {fileID: 3125773262195339368}
   - component: {fileID: 6067640622838679460}
+  - component: {fileID: -1911886174426270253}
   m_Layer: 0
   m_Name: Projectile2D
   m_TagString: Untagged
@@ -171,3 +172,16 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   body: {fileID: 3125773262195339368}
+--- !u!114 &-1911886174426270253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 909776211590213190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eecc7fc7692ddd4895a389d76118397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useTrigger: 1
