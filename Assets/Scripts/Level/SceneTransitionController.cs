@@ -8,6 +8,7 @@ using System.Collections;
 public class SceneTransitionController : MonoBehaviour
 {
     [SerializeField] private FadeCanvasController fadeCanvas;
+    [SerializeField] private AudioClip preloadedNextClip;
 
     private void Awake()
     {
@@ -87,6 +88,14 @@ public class SceneTransitionController : MonoBehaviour
         if (Time.timeScale != 1.0f)
         {
             Time.timeScale = 1.0f;
+        }
+
+        // 로드 전 미리 크로스페이드
+        var ctrl = FindAnyObjectByType<BgmController>();
+        if (ctrl != null /*&& preloadedNextClip != null*/)
+        {
+            ctrl.CrossfadeTo(preloadedNextClip, 0.8f, 1.2f);
+            yield return new WaitForSecondsRealtime(1.0f);
         }
 
         SceneManager.LoadScene(buildIndex);

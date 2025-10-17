@@ -1922,6 +1922,8 @@ GameObject:
   - component: {fileID: 943954593}
   - component: {fileID: 943954594}
   - component: {fileID: 943954595}
+  - component: {fileID: 943954597}
+  - component: {fileID: 943954596}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1985,6 +1987,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeCanvas: {fileID: 1179117643}
+  preloadedNextClip: {fileID: 0}
 --- !u!114 &943954594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2012,10 +2015,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4279b89a1dc62374892298a80b3b78fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startTimeSeconds: 10
+  startTimeSeconds: 300
   timeText: {fileID: 2142032339}
   deathsText: {fileID: 24832047}
   failPanel: {fileID: 551752794}
+--- !u!114 &943954596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 943954589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e80a54a22c4ee574a89cf952eab7de25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bgmClip: {fileID: 8300000, guid: bb0b680d8297fca49b9c1ade3456eace, type: 3}
+  playImmediateOnStart: 1
+  targetVolume: 0.8
+  fadeSeconds: 1
+--- !u!114 &943954597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 943954589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3611895c5929dfd47bbbdc38cb0d89c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultVolume: 0.8
+  defaultFadeSeconds: 1.2
 --- !u!1 &1009766410
 GameObject:
   m_ObjectHideFlags: 0
