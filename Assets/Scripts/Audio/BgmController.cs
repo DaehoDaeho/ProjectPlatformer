@@ -25,9 +25,9 @@ public class BgmController : MonoBehaviour
 
     private void ConfigureSource(AudioSource src)
     {
-        src.playOnAwake = false;
-        src.loop = true;
-        src.volume = 0.0f;
+        src.playOnAwake = false;    // 처음부터 재생할지 여부.
+        src.loop = true;    // 반복 재생 여부.
+        src.volume = 0.0f;  // 볼륨.
     }
 
     public void PlayImmediate(AudioClip clip, float volume)
@@ -85,6 +85,7 @@ public class BgmController : MonoBehaviour
             elapsed = elapsed + Time.unscaledDeltaTime;
             float t = Mathf.Clamp01(elapsed / duration);
 
+            // 사운드의 볼륨을 보간 함수로 서서히 키우거나 줄여줌.
             float vActive = Mathf.Lerp(startActive, endActive, t);
             float vIdle = Mathf.Lerp(0.0f, endIdle, t);
 

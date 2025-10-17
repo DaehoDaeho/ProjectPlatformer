@@ -16,6 +16,9 @@ public class GameScore : MonoBehaviour
     public int maxScore = 10;
     public GameObject goalPortal;
 
+    public AudioClip changeAudio;
+    public BgmController bgmController;
+
     private void Awake()
     {
         ResetScore();
@@ -36,6 +39,11 @@ public class GameScore : MonoBehaviour
             if(goalPortal != null)
             {
                 goalPortal.SetActive(true);
+            }
+
+            if (bgmController != null)
+            {
+                bgmController.CrossfadeTo(changeAudio, 0.8f, 1.2f);
             }
         }
     }

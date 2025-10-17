@@ -3233,6 +3233,8 @@ MonoBehaviour:
   startScore: 0
   maxScore: 10
   goalPortal: {fileID: 1109259974}
+  changeAudio: {fileID: 8300000, guid: 793e0ab952660c047b46fb0e99b3516f, type: 3}
+  bgmController: {fileID: 943954597}
 --- !u!4 &1306572673
 Transform:
   m_ObjectHideFlags: 0
