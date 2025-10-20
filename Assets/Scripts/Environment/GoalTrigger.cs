@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class GoalTrigger : MonoBehaviour
 {
-    [SerializeField]
-    private StageClearUI clearUI;
+    //[SerializeField]
+    //private StageClearUI clearUI;
 
     [SerializeField]
     private LevelFlowController lfController;
