@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class GameScore : MonoBehaviour
@@ -19,6 +20,8 @@ public class GameScore : MonoBehaviour
     public AudioClip changeAudio;
     public BgmController bgmController;
 
+    public event Action<int> OnScoreChanged;
+
     private void Awake()
     {
         ResetScore();
@@ -33,6 +36,11 @@ public class GameScore : MonoBehaviour
     public void AddScore(int amount)
     {
         currentScore += amount; // currentScore = currentScore + amount;
+
+        if(OnScoreChanged != null)
+        {
+            OnScoreChanged.Invoke(currentScore);
+        }
 
         if(currentScore >= maxScore)
         {

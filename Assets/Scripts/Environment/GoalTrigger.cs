@@ -5,19 +5,27 @@ public class GoalTrigger : MonoBehaviour
     [SerializeField]
     private StageClearUI clearUI;
 
+    [SerializeField]
+    private LevelFlowController lfController;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag("Player") == true)
         {
-            LevelTimer levelTimer = FindAnyObjectByType<LevelTimer>();
-            if(levelTimer != null)
-            {
-                levelTimer.FinishAndSave();
-            }
+            //LevelTimer levelTimer = FindAnyObjectByType<LevelTimer>();
+            //if(levelTimer != null)
+            //{
+            //    levelTimer.FinishAndSave();
+            //}
 
-            if (clearUI != null)
+            //if (clearUI != null)
+            //{
+            //    clearUI.ShowGameClearUI();
+            //}
+
+            if(lfController != null)
             {
-                clearUI.ShowGameClearUI();
+                lfController.NotifyGoalTouched();
             }
         }
     }

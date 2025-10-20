@@ -1924,6 +1924,8 @@ GameObject:
   - component: {fileID: 943954595}
   - component: {fileID: 943954597}
   - component: {fileID: 943954596}
+  - component: {fileID: 943954599}
+  - component: {fileID: 943954598}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -2049,6 +2051,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultVolume: 0.8
   defaultFadeSeconds: 1.2
+--- !u!114 &943954598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 943954589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cdeb8a4981ffef42be9b1239a50bef4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelTimer: {fileID: 943954594}
+  constraints: {fileID: 943954595}
+  calculator: {fileID: 1444110446}
+--- !u!114 &943954599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 943954589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f63124aecf86c948ad9e2b570d6f8d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requiredScore: 10
+  gameScore: {fileID: 1306572672}
+  objectiveText: {fileID: 0}
+  clearPanel: {fileID: 1444110442}
 --- !u!1 &1009766410
 GameObject:
   m_ObjectHideFlags: 0
@@ -2520,6 +2553,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clearUI: {fileID: 175479930}
+  lfController: {fileID: 943954599}
 --- !u!70 &1109259978
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
