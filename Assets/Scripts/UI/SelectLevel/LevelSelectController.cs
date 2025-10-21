@@ -5,6 +5,7 @@ public class LevelSelectController : MonoBehaviour
     [SerializeField] private LevelMeta[] levelMetas;
     [SerializeField] private Transform cardsParent;
     [SerializeField] private GameObject levelCardPrefab;
+    [SerializeField] private UISelectionGroup selectionGroup;
 
     private void Start()
     {
@@ -38,6 +39,11 @@ public class LevelSelectController : MonoBehaviour
             {
                 view.SetData(meta);
             }
+        }
+
+        if(selectionGroup != null)
+        {
+            selectionGroup.Init();
         }
     }
 }
