@@ -67,7 +67,7 @@ public class LevelCardView : MonoBehaviour
 
         if (lockView != null)
         {
-            lockView.Apply(locked: (unlocked == false), requiredStars: required, currentTotalStars: totalStars);
+            lockView.Apply((unlocked == false), required, totalStars);
         }
         //==================================================================
 

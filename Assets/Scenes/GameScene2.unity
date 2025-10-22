@@ -2003,7 +2003,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeText: {fileID: 104925585}
-  levelId: Level1
+  levelId: Level2
   autoShowBestOnStart: 1
 --- !u!114 &943954595
 MonoBehaviour:
@@ -2552,7 +2552,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e6e812e8ba6c324e839b06f3de083af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clearUI: {fileID: 175479930}
   lfController: {fileID: 943954599}
 --- !u!70 &1109259978
 CapsuleCollider2D:

@@ -23,7 +23,7 @@ public class UnlockDatabase : ScriptableObject
             {
                 continue;
             }
-
+            
             if (string.Equals(r.levelId, levelId) == true)
             {
                 return r;
