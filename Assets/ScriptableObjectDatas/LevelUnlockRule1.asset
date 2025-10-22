@@ -9,11 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 827540ababb22b84bb3416ebffd80b22, type: 3}
-  m_Name: LevelMeta1
+  m_Script: {fileID: 11500000, guid: 93bdb78eeacb1e74ea44b04fa89c0bc4, type: 3}
+  m_Name: LevelUnlockRule1
   m_EditorClassIdentifier: 
-  displayName: Stage1
-  sceneName: GameScene
-  levelId: 
-  preview: {fileID: 0}
-  initiallyLocked: 0
+  levelId: Level1
+  requiredTotalStars: 1

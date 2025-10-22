@@ -503,6 +503,7 @@ MonoBehaviour:
   cardsParent: {fileID: 1121837208}
   levelCardPrefab: {fileID: 1837137950046821164, guid: 9599c839cc43a064dba8dc9f88c549bc, type: 3}
   selectionGroup: {fileID: 1121837210}
+  unlockDatabase: {fileID: 11400000, guid: f876ffa282c82b84ba94e2bf13508ce7, type: 2}
 --- !u!4 &2052821627
 Transform:
   m_ObjectHideFlags: 0

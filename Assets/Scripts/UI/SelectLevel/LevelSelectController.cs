@@ -7,6 +7,42 @@ public class LevelSelectController : MonoBehaviour
     [SerializeField] private GameObject levelCardPrefab;
     [SerializeField] private UISelectionGroup selectionGroup;
 
+    //==========================================================
+    [SerializeField] private UnlockDatabase unlockDatabase;
+    private string[] allLevelIds;
+
+    private void Awake()
+    {
+        BuildAllLevelIds();
+    }
+
+    private void BuildAllLevelIds()
+    {
+        if (levelMetas == null)
+        {
+            allLevelIds = new string[0];
+            return;
+        }
+
+        allLevelIds = new string[levelMetas.Length];
+
+        for (int i = 0; i < levelMetas.Length; i = i + 1)
+        {
+            LevelMeta meta = levelMetas[i];
+
+            if (meta == null)
+            {
+                allLevelIds[i] = "";
+            }
+            else
+            {
+                allLevelIds[i] = meta.levelId;
+            }
+        }
+    }
+
+    //==========================================================
+
     private void Start()
     {
         if (cardsParent == null)
@@ -37,7 +73,8 @@ public class LevelSelectController : MonoBehaviour
             LevelCardView view = go.GetComponent<LevelCardView>();
             if (view != null)
             {
-                view.SetData(meta);
+                //view.SetData(meta);
+                view.SetData(meta, unlockDatabase, allLevelIds);
             }
         }
 

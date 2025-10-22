@@ -11,9 +11,14 @@ public class LevelCardView : MonoBehaviour
     [SerializeField] private Button playButton;
     [SerializeField] private StarIconsView starIcons;
 
+    //=======================================================
+    [SerializeField] private LevelCardLockView lockView;
+    //=======================================================
+
     private LevelMeta currentMeta;
 
-    public void SetData(LevelMeta meta)
+    //public void SetData(LevelMeta meta)
+    public void SetData(LevelMeta meta, UnlockDatabase unlockDb, string[] allLevelIds)
     {
         currentMeta = meta;
 
@@ -43,6 +48,28 @@ public class LevelCardView : MonoBehaviour
             int shown = (bestStars >= 0) ? bestStars : 0;
             starIcons.SetStars(shown);
         }
+
+        //==================================================================
+        int totalStars = ProgressReadOnly.GetTotalBestStars(allLevelIds);
+        int required = 0;
+        bool unlocked = true;
+
+        if (unlockDb != null)
+        {
+            LevelUnlockRule rule = unlockDb.FindRule(meta.levelId);
+
+            if (rule != null)
+            {
+                required = rule.requiredTotalStars;
+                unlocked = (totalStars >= required);
+            }
+        }
+
+        if (lockView != null)
+        {
+            lockView.Apply(locked: (unlocked == false), requiredStars: required, currentTotalStars: totalStars);
+        }
+        //==================================================================
 
         if (playButton != null)
         {
