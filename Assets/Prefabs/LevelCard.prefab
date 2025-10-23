@@ -289,6 +289,9 @@ GameObject:
   - component: {fileID: -981364550699724234}
   - component: {fileID: 926950274313930377}
   - component: {fileID: 4639223695354692667}
+  - component: {fileID: 3210471829895635384}
+  - component: {fileID: 7338098253938358756}
+  - component: {fileID: 7727731610617448458}
   m_Layer: 5
   m_Name: LevelCard
   m_TagString: Untagged
@@ -427,6 +430,7 @@ MonoBehaviour:
   selectedBorderColor: {r: 1, g: 0.85, b: 0.2, a: 1}
   normalBackgroundColor: {r: 1, g: 1, b: 1, a: 0.05}
   selectedBackgroundColor: {r: 1, g: 0.98, b: 0.7, a: 0.2}
+  bridge: {fileID: 7727731610617448458}
   selectionGroup: {fileID: 0}
 --- !u!114 &4639223695354692667
 MonoBehaviour:
@@ -445,6 +449,101 @@ MonoBehaviour:
   playButton: {fileID: 1598941200865349829}
   dimTargets: []
   dimAlpha: 0.5
+--- !u!114 &3210471829895635384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1837137950046821164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19e203406eb52f64089512ef28dbc244, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseScale: 1
+  peakScale: 1.12
+  frequency: 3
+  damping: 3.5
+  duration: 0.6
+  intensityCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &7338098253938358756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1837137950046821164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f873be8d8a2c5940b498d7ef8695708, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetGraphic: {fileID: 0}
+  fadeSeconds: 0.35
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &7727731610617448458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1837137950046821164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da3cd00437094a042b057fc7951dcfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spring: {fileID: 3210471829895635384}
+  colorFader: {fileID: 7338098253938358756}
+  selectedColor: {r: 1, g: 0.98, b: 0.7, a: 0.35}
+  deselectedColor: {r: 1, g: 1, b: 1, a: 0.05}
 --- !u!1 &2356836899564486791
 GameObject:
   m_ObjectHideFlags: 0

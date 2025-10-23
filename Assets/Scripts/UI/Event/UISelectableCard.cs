@@ -22,6 +22,9 @@ public class UISelectableCard : MonoBehaviour, IPointerClickHandler
     [SerializeField]
     private Color selectedBackgroundColor = new Color(1, 0.98f, 0.7f, 0.2f);
 
+    [SerializeField]
+    UISelectionBridge bridge;
+
     public UISelectionGroup selectionGroup;
 
     private bool selected = false;
@@ -79,6 +82,8 @@ public class UISelectableCard : MonoBehaviour, IPointerClickHandler
 
         selected = true;
         ApplyVisual();
+
+        bridge.OnSelected();
     }
 
     public void Deselect()
@@ -90,5 +95,7 @@ public class UISelectableCard : MonoBehaviour, IPointerClickHandler
 
         selected = false;
         ApplyVisual();
+
+        bridge.OnDeselected();
     }
 }
