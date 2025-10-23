@@ -345,7 +345,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.5019608}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.2}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -409,7 +409,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   normalScale: 1
-  hoverScale: 1.3
+  hoverScale: 1
   scaleLerpPerSecond: 12
   useSmoothStep: 0
 --- !u!114 &926950274313930377
@@ -543,7 +543,7 @@ MonoBehaviour:
   spring: {fileID: 3210471829895635384}
   colorFader: {fileID: 7338098253938358756}
   selectedColor: {r: 1, g: 0.98, b: 0.7, a: 0.35}
-  deselectedColor: {r: 1, g: 1, b: 1, a: 0.05}
+  deselectedColor: {r: 1, g: 1, b: 1, a: 0.2}
 --- !u!1 &2356836899564486791
 GameObject:
   m_ObjectHideFlags: 0

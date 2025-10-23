@@ -23,7 +23,7 @@ public class UISelectableCard : MonoBehaviour, IPointerClickHandler
     private Color selectedBackgroundColor = new Color(1, 0.98f, 0.7f, 0.2f);
 
     [SerializeField]
-    UISelectionBridge bridge;
+    private UISelectionBridge bridge;
 
     public UISelectionGroup selectionGroup;
 
@@ -64,11 +64,11 @@ public class UISelectableCard : MonoBehaviour, IPointerClickHandler
         {
             if (selected == true)
             {
-                background.color = selectedBackgroundColor;
+                //background.color = selectedBackgroundColor;
             }
             else
             {
-                background.color = normalBackgroundColor;
+                //background.color = normalBackgroundColor;
             }
         }
     }
