@@ -8,11 +8,9 @@ public static class GameplayEvents
     public static event Action<Vector3, int> OnCoinCollected;
     public static event Action<Vector3> OnPlayerHit;
 
-    //=======================================================================
     public static event Action<Vector3> OnEnemyDefeated;
     public static event Action<float> OnHardLanding;
-    //=======================================================================
-
+    
     public static void RaiseCoinCollected(Vector3 worldPosition, int value)
     {
         if(OnCoinCollected != null)

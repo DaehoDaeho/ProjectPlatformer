@@ -6,8 +6,8 @@ using UnityEngine;
 public class CameraShake2D : MonoBehaviour
 {
     [Header("기본 값")]
-    [SerializeField] private float defaultIntensity = 0.25f;
-    [SerializeField] private float defaultDuration = 0.2f;
+    [SerializeField] private float defaultIntensity = 0.25f;    // 흔들림 강도.
+    [SerializeField] private float defaultDuration = 0.2f;  // 흔들림 시간.
     [SerializeField] private float defaultDamping = 8.0f;
 
     private Vector3 originalLocalPos;
@@ -32,6 +32,8 @@ public class CameraShake2D : MonoBehaviour
 
     public void ShakeOnce(float reqIntensity, float reqDuration, float reqDamping)
     {
+        originalLocalPos = transform.localPosition;
+
         if (reqIntensity <= 0.0f)
         {
             reqIntensity = defaultIntensity;

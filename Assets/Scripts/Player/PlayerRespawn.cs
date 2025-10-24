@@ -27,15 +27,15 @@ public class PlayerRespawn : MonoBehaviour
 
     public void Respawn()
     {
-        if(hasSpawnPosition == true)
-        {
-            rigidBody.linearVelocity = Vector2.zero;
-            transform.position = currentSpawnPosition;
-        }
-        else
-        {
-            rigidBody.linearVelocity = Vector2.zero;
-            transform.position = defaultSpawnPosition;
-        }
+        //if (hasSpawnPosition == true)
+        //{
+        //    rigidBody.linearVelocity = Vector2.zero;
+        //    transform.position = currentSpawnPosition;
+        //}
+        //else
+        //{
+        //    rigidBody.linearVelocity = Vector2.zero;
+        //    transform.position = defaultSpawnPosition;
+        //}
     }
 }
