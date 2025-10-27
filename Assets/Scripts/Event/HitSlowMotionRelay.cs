@@ -10,7 +10,7 @@ public class HitSlowMotionRelay : MonoBehaviour
     [SerializeField] private float hitTimeScale = 0.2f;
     [SerializeField] private float durationSeconds = 0.15f;
 
-    private void OnEnable()
+    private void Start()
     {
         GameplayEvents.OnPlayerHit += HandlePlayerHit;
     }

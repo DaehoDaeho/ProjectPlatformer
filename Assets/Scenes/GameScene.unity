@@ -2192,7 +2192,7 @@ MonoBehaviour:
   retryButton: {fileID: 269781442}
   exitButton: {fileID: 1765521642}
   titleText: {fileID: 1680600639}
-  levelSelectSceneName: LevelSelect
+  levelSelectSceneName: SelectScene
 --- !u!114 &666740377
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -31,6 +31,7 @@ public class GameStateManager : MonoBehaviour
     private void Awake()
     {
         // 단일 인스턴스 보장. 중복 생성 시 기존 인스턴스를 유지하고 자신을 제거.
+        // 싱글턴 패턴 : 디자인 패턴의 한 종류.
         if (Instance == null)
         {
             Instance = this;
