@@ -154,7 +154,7 @@ MonoBehaviour:
   extraUpwardBonusIfFalling: 3
   maxUpwardSpeed: 16
   cooldownSeconds: 0.15
-  bounceSfx: {fileID: 0}
-  sfxVolume: 0.8
+  bounceSfx: {fileID: 8300000, guid: 2c5292ba5cf254919a6b9e2b18e04f49, type: 3}
+  sfxVolume: 1
   springAnimator: {fileID: 0}
   triggerName: Bounce
