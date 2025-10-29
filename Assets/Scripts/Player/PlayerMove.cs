@@ -11,6 +11,10 @@ public class PlayerMove : MonoBehaviour
     public float rayLength = 0.2f;
     public bool useRaycast = true;
 
+    //================================================================
+    public SpriteRenderer sp;
+    //================================================================
+
     private float moveInput;
     private bool isGrounded = false;
     private bool wantsToJump = false;
@@ -32,6 +36,8 @@ public class PlayerMove : MonoBehaviour
         {
             Jump();
         }
+
+        SetDirection();
     }
 
     void Jump()
@@ -82,6 +88,21 @@ public class PlayerMove : MonoBehaviour
         {
             Gizmos.color = Color.yellow;
             Gizmos.DrawWireSphere(footPoint.position, groundCheckRadius);
+        }
+    }
+
+    private void SetDirection()
+    {
+        if(sp != null)
+        {
+            if(moveInput < 0.0f)
+            {
+                sp.flipX = true;
+            }
+            else if(moveInput > 0.0f)
+            {
+                sp.flipX = false;
+            }
         }
     }
 }
