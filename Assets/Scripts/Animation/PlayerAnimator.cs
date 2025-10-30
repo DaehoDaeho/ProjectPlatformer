@@ -8,9 +8,7 @@ using UnityEngine;
 ///   - 이동 방향에 따라 SpriteRenderer.flipX 를 갱신.
 /// 사용 파라미터(Animator):
 ///   - float "Speed"          : |velocity.x|
-///   - float "VerticalSpeed"  : velocity.y
 ///   - bool  "IsGrounded"     : 바닥 감지 결과.
-///   - trigger "Jump"         : (선택) 점프 입력 순간에만 발화.
 /// 설계 원칙:
 ///   - 입력·물리와 시각(Animator)의 분리: 이 스크립트는 "상태 관측 -> 파라미터 반영"만 담당.
 ///   - 모든 임계값과 레이어는 인스펙터에서 조정 가능하게 만든다.
@@ -174,7 +172,7 @@ public class PlayerAnimator : MonoBehaviour
         }
 
         animator.SetFloat(paramSpeed, speedAbs);
-        animator.SetFloat(paramVerticalSpeed, verticalSpeed);
+        //animator.SetFloat(paramVerticalSpeed, verticalSpeed);
         animator.SetBool(paramIsGrounded, grounded);
     }
 

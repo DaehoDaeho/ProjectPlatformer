@@ -4688,8 +4688,8 @@ GameObject:
   - component: {fileID: 1365911220}
   - component: {fileID: 1365911221}
   - component: {fileID: 1365911222}
-  - component: {fileID: 1365911226}
-  - component: {fileID: 1365911225}
+  - component: {fileID: 1365911223}
+  - component: {fileID: 1365911224}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -4892,7 +4892,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.14, y: 1.36}
   m_EdgeRadius: 0
---- !u!95 &1365911225
+--- !u!95 &1365911223
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0
@@ -4902,7 +4902,7 @@ Animator:
   m_GameObject: {fileID: 1365911214}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1c290554ef6cff54d87a41202de2b49a, type: 2}
+  m_Controller: {fileID: 9100000, guid: 4d9ba85f30f27e24188b069e4efd3e84, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -4914,7 +4914,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1365911226
+--- !u!114 &1365911224
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4926,7 +4926,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7a774bd84111dc46b43c5dc9fa85f27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 1365911225}
+  animator: {fileID: 1365911223}
   rb: {fileID: 1365911218}
   spriteRenderer: {fileID: 1365911216}
   groundCheck: {fileID: 441758901}
