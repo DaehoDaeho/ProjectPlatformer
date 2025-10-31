@@ -49,10 +49,10 @@ public class GameScore : MonoBehaviour
                 goalPortal.SetActive(true);
             }
 
-            if (bgmController != null)
-            {
-                bgmController.CrossfadeTo(changeAudio, 0.8f, 1.2f);
-            }
+            //if (bgmController != null)
+            //{
+            //    bgmController.CrossfadeTo(changeAudio, 0.8f, 1.2f);
+            //}
         }
     }
 

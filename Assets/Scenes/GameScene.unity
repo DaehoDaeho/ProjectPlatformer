@@ -4814,10 +4814,16 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 64
+  enemyMask:
+    serializedVersion: 2
+    m_Bits: 256
   rb: {fileID: 1365911218}
   rayLength: 0.2
   useRaycast: 1
   sp: {fileID: 1365911216}
+  targetUpwardSpeed: 6
+  extraUpwardBonusIfFalling: 3
+  maxUpwardSpeed: 8
 --- !u!114 &1365911220
 MonoBehaviour:
   m_ObjectHideFlags: 0

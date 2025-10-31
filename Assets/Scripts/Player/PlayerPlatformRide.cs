@@ -13,7 +13,7 @@ public class PlayerPlatformRide : MonoBehaviour
         if(platform != null)
         {
             movingPlatform = platform;
-            transform.SetParent(movingPlatform.transform);
+            //transform.SetParent(movingPlatform.transform);
         }
     }
 
@@ -25,7 +25,7 @@ public class PlayerPlatformRide : MonoBehaviour
             if(platform == movingPlatform)
             {
                 movingPlatform = null;
-                transform.SetParent(null);
+                //transform.SetParent(null);
             }
         }
     }

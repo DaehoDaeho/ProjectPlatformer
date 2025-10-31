@@ -14,6 +14,8 @@ public class EnemyPatrol2D : MonoBehaviour
     public Rigidbody2D body;
     public SpriteRenderer sprite;
 
+    public Animator animator;
+
     private int direction = 1;
 
     private void Awake()
@@ -34,6 +36,22 @@ public class EnemyPatrol2D : MonoBehaviour
         }
 
         ApplyVisualFacing();
+    }
+
+    private void Update()
+    {
+        if(animator != null)
+        {
+            animator.SetBool("IsMoving", body.linearVelocity.x != 0.0f);
+            //if (body.linearVelocity.x != 0.0f)
+            //{
+            //    animator.SetBool("IsMoving", true);
+            //}
+            //else
+            //{
+            //    animator.SetBool("IsMoving", false);
+            //}
+        }
     }
 
     private void FixedUpdate()
