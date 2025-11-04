@@ -37,6 +37,18 @@ public class EnemySight2D : MonoBehaviour
             return false;
         }
 
+        if(player != null)
+        {
+            PlayerHealth ph = player.GetComponent<PlayerHealth>();
+            if(ph != null)
+            {
+                if(ph.IsPlayerAlive() == false)
+                {
+                    return false;
+                }
+            }
+        }
+
         Vector2 origin = sensorPoint.position;
         Vector2 toPlayer = (Vector2)(player.position - sensorPoint.position);
         float distance = toPlayer.magnitude;    // ∫§≈Õ¿« ≈©±‚.

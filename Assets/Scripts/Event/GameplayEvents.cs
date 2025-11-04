@@ -7,6 +7,7 @@ public static class GameplayEvents
     // 함수를 저장할 수 있는 변수.
     public static event Action<Vector3, int> OnCoinCollected;
     public static event Action<Vector3> OnPlayerHit;
+    public static event Action<int> OnChagnedPlayerHP;
 
     public static event Action<Vector3> OnEnemyDefeated;
     public static event Action<float> OnHardLanding;
@@ -25,6 +26,15 @@ public static class GameplayEvents
         if (handler != null)
         {
             handler.Invoke(worldPosition);
+        }
+    }
+
+    public static void RaisePlayerChagendHP(int currentHP)
+    {
+        Action<int> handler = OnChagnedPlayerHP;
+        if(handler != null)
+        {
+            handler.Invoke(currentHP);
         }
     }
 

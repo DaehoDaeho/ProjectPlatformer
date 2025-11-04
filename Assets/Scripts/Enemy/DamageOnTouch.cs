@@ -7,10 +7,16 @@ public class DamageOnTouch : MonoBehaviour
         bool isPlayer = collision.collider.CompareTag("Player") == true;
         if(isPlayer == true)
         {
-            PlayerRespawn pr = collision.collider.GetComponent<PlayerRespawn>();
-            if(pr != null)
+            //PlayerRespawn pr = collision.collider.GetComponent<PlayerRespawn>();
+            //if(pr != null)
+            //{
+            //    pr.Respawn();
+            //}
+
+            PlayerHealth ph = collision.collider.GetComponent<PlayerHealth>();
+            if (ph != null)
             {
-                pr.Respawn();
+                ph.ApplyDamage();
             }
         }
     }

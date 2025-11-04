@@ -36,10 +36,15 @@ public class Projectile2D : MonoBehaviour
         bool isPlayer = (collision.CompareTag("Player") == true);
         if (isPlayer == true)
         {
-            PlayerRespawn pr = collision.GetComponent<PlayerRespawn>();
-            if (pr != null)
+            //PlayerRespawn pr = collision.GetComponent<PlayerRespawn>();
+            //if (pr != null)
+            //{
+            //    pr.Respawn();
+            //}
+            PlayerHealth ph = collision.GetComponent<PlayerHealth>();
+            if(ph != null)
             {
-                pr.Respawn();
+                ph.ApplyDamage();
             }
 
             Destroy(gameObject);
