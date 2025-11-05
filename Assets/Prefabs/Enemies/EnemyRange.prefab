@@ -80,6 +80,7 @@ GameObject:
   - component: {fileID: 193856044659870324}
   - component: {fileID: -6574883715703803858}
   - component: {fileID: -1907861199490458614}
+  - component: {fileID: 7278046598752159592}
   m_Layer: 8
   m_Name: EnemyRange
   m_TagString: Untagged
@@ -247,6 +248,7 @@ MonoBehaviour:
   body: {fileID: 545121902879622982}
   sprite: {fileID: 5955450558024642894}
   animator: {fileID: -1907861199490458614}
+  state: {fileID: 7278046598752159592}
 --- !u!114 &1368558192934173570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -333,3 +335,16 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7278046598752159592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7211801358390420708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e344288b8035f44f8c19ef435762905, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: -1907861199490458614}

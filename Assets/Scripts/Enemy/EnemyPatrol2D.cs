@@ -16,6 +16,8 @@ public class EnemyPatrol2D : MonoBehaviour
 
     public Animator animator;
 
+    public EnemyState state;
+
     private int direction = 1;
 
     private void Awake()
@@ -56,6 +58,12 @@ public class EnemyPatrol2D : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if(state != null && state.GetAlive() == false)
+        {
+            body.linearVelocity = Vector2.zero;
+            return;
+        }
+
         Vector2 v = body.linearVelocity;
         v.x = direction * moveSpeed;
         body.linearVelocity = v;

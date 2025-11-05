@@ -11,11 +11,19 @@ public class EnemyChaseController2D : MonoBehaviour
 
     public Rigidbody2D body;
 
+    public EnemyState state;
+
     private float notSeenTimer = 0.0f;
     private bool isChasing = false;
 
     private void FixedUpdate()
     {
+        if (state != null && state.GetAlive() == false)
+        {
+            body.linearVelocity = Vector2.zero;
+            return;
+        }
+
         bool canSee = (sight != null) ? sight.CanSeePlayer() : false;
 
         if(isChasing == false)

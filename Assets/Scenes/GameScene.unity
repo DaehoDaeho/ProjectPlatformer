@@ -5277,8 +5277,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   respawn: {fileID: 1365911220}
-  col: {fileID: 1365911222}
-  rb: {fileID: 1365911218}
   maxHP: 3
 --- !u!1 &1370477967
 GameObject:

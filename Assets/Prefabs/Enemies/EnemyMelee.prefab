@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 5536045704247902697}
   - component: {fileID: -4851793243871007662}
   - component: {fileID: 6595135843066898079}
+  - component: {fileID: 103044344232780206}
   m_Layer: 8
   m_Name: EnemyMelee
   m_TagString: Untagged
@@ -184,6 +185,7 @@ MonoBehaviour:
   body: {fileID: 5464875337871657774}
   sprite: {fileID: 7081883004735150230}
   animator: {fileID: 6595135843066898079}
+  state: {fileID: 103044344232780206}
 --- !u!114 &8437103897416963004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -221,6 +223,7 @@ MonoBehaviour:
   maxChaseDistance: 12
   loseSightTime: 1
   body: {fileID: 5464875337871657774}
+  state: {fileID: 103044344232780206}
 --- !u!114 &5536045704247902697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -268,6 +271,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &103044344232780206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1488985769897022865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e344288b8035f44f8c19ef435762905, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 6595135843066898079}
 --- !u!1 &7977908285317760548
 GameObject:
   m_ObjectHideFlags: 0

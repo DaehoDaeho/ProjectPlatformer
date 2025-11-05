@@ -39,8 +39,15 @@ public class PlayerJumpAttack : MonoBehaviour
         // 카메라 흔들림 추가.
         GameplayEvents.RaiseEnemyDefeated(hit.collider.transform.position);
 
+        EnemyState state = hit.collider.GetComponent<EnemyState>();
+        if(state != null)
+        {
+            state.PlayHitAnimation();
+            state.SetAlive(false);
+        }
+
         // 밟힌 적을 파괴.
-        Destroy(hit.collider.gameObject);
+        Destroy(hit.collider.gameObject, 1.0f);
 
         // 플레이어의 현재 속도를 가져와서 저장한다.
         Vector2 v = rb.linearVelocity;
