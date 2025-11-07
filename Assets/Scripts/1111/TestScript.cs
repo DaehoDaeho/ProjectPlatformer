@@ -10,27 +10,15 @@ public class TestScript : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        int a = 0;
-        for(int i=0;i<50;i++)
-        {
-            if(i == 30)
-            {
-                continue;
-            }
-            a++;
-        }
+        int[] score = new int[1000];    // 1차원 배열.
 
-        int j = 0;
-        while(j<50)
-        {
-            j++;
-        }
+        int[] score2;
+        score2 = new int[10000];
 
-        int k = 0;
-        do
-        {
-            k++;
-        } while (k < 50);
+        int[] score3 = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+        // 다차원 배열.
+        int[,] data = new int[4, 4];
     }
 
     // Update is called once per frame
